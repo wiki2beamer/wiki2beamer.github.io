@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>wiki2beamer home</title>
+    <meta http-equiv="expires" content="0"><!-- disable caching -->
+</head>
+
+<body>
+<h1>wiki2beamer</h1>
+<p>collaborative slide editing made easy</p>
+<p>wiki2beamer converts a simple wiki-like syntax to complex LaTeX beamer code.
+It's written in python and should run on windows and all *nix platforms.
+Why collaborative? Because you can use it with version control systems.
+Afraid to loose some LaTeX powers? Don't worry: you can always fall back to
+plain LaTeX as wiki2beamer is just a preprocessor.</p>
+<p>wiki2beamer: Try it with your colleagues! :)</p>
+
+<h2>Syntax</h2>
+<p>This is how it looks like:</p>
+
+<table border="1">
+<tr>
+    <td>wiki2beamer code input</td>
+    <td>LaTeX code output</td>
+</tr>
+<tr>
+   <td>
+<pre>
+==== A simple frame ====
+
+* with a funky
+* bullet list
+*# and two
+*# numbered sub-items
+</pre>
+    </td>
+
+    <td>
+<pre>
+\begin{frame}
+ \frametitle{A simple frame}
+
+  \begin{itemize}
+    \item with a funky
+    \item bullet list
+      \begin{enumerate}
+        \item and two
+    \item numbered sub-items
+      \end{enumerate}
+  \end{itemize}
+
+\end{frame}
+</pre>
+    </td>
+</tr>
+</table>
+<p>Which do you like more? And there is even more cool stuff inside: animations, code listings, text formatting, ... (see the <a href="wiki2beamer-example.pdf">example pdf</a>).</p>
+
+
+<h2>Download</h2>
+<p><a href="http://sourceforge.net/projects/wiki2beamer/">Get the latest version of wiki2beamer at sourceforge.net.</a></p>
+
+<h2>Links</h2>
+<ul>
+    <li>the <a href="wiki2beamer.html">wiki2beamer man-page</a> (reference documentation)</li>
+    <li><a href="wiki2beamer-example.pdf">wiki2beamer example presentation (PDF)</a></li>
+    <li><a href="http://sourceforge.net/projects/wiki2beamer/">wiki2beamer sourceforge project page</a></li>
+    <li><a href="https://lists.sourceforge.net/lists/listinfo/wiki2beamer-devel">wiki2beamer-devel@lists.sourceforge.net mailinglist</a></li>
+    <li><a href="http://sourceforge.net/tracker/?group_id=195885&atid=955238">bugtracker</a></li>
+    <li><a href="http://wiki2beamer.git.sourceforge.net/git/gitweb.cgi?p=wiki2beamer/wiki2beamer;a=summary">git source code repository</a></li>
+</ul>
+
+<h2>Contribute</h2>
+<p>
+If you want to improve wiki2beamer, don't be afraid.
+It's not that complicated and we happily accept patches.
+Just make your changes, and submit a patch (or publish a git branch so we can pull in your changes).
+If you want to make things go faster, you can also document your changes in the man-page sources
+(docbook xml) and write some unittests so we don't have to do that for you.
+</p>
+
+<p>
+We use <a href="http://git-scm.com/">git</a> for version control. The clone URL
+is:<br/><br/>
+&nbsp&nbsp&nbsp&nbsp<code>git://wiki2beamer.git.sourceforge.net/gitroot/wiki2beamer/wiki2beamer</code>
+</p>
+
+<h2>Distributions</h2>
+<p>wiki2beamer has native packages in the following distributions:</p>
+<ul>
+    <li>Debian: <a href="http://packages.debian.org/squeeze/wiki2beamer">testing</a> and <a href="http://packages.debian.org/experimental/wiki2beamer">experimental</a></li>
+    <li>Ubuntu: <a href="http://packages.ubuntu.com/maverick/wiki2beamer">universe</a></li>
+    <li>Gentoo: <a href="http://packages.gentoo.org/package/app-text/wiki2beamer">app-text/wiki2beamer</a></li>
+  <li>Fedora: <a href="https://admin.fedoraproject.org/pkgdb/acls/name/wiki2beamer">F17 and later</a></li>
+</ul>
+
+<h2>Dependencies/Compatibility</h2>
+<p>
+wiki2beamer only requires a working python interpreter.
+It's supposed to run on CPython 2.3 up to 3.x.
+If it doesn't, it's a bug that should be filed in the bugtracker.
+</p>
+
+</body>
+
+</html>
